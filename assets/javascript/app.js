@@ -42,6 +42,14 @@ function gameStart() {
 
 }
 
+function newPageStart() {
+	window.open("quiz.html")
+}
+
+function load(){
+	reduceTime();
+	gameStart();
+}
 
 
 //======== Functions =========
@@ -112,6 +120,6 @@ function check(){
 
 $(document).on("click", "#start", function() {
 	gameStart();
-	document.getElementById("quiz").style.visibility = "visible";
+		document.getElementById("quiz").style.visibility = "visible";
 
 });	
