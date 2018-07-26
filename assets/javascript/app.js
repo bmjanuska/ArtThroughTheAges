@@ -19,8 +19,6 @@
 //======== Variables =========
 
 	//======== Scores =========
-	// win = 0,
-	// loss = 0; 
 	// unanswer = 0;
 	
 	//======== Timers =========
@@ -32,71 +30,68 @@
 //======== Functions =========
 
 
-//======== Variables =========
 
 function check(){
-
+	//======== Variables =========
 	var question1 = document.quiz.question1.value;
 	var question2 = document.quiz.question2.value;
 	var question3 = document.quiz.question3.value;
 	var question4 = document.quiz.question4.value;
+	// correct score variable
 	var correct = 0;
+	// incorrect score variable
 	var incorrect = 0;
+	// unanswered score variable
 	var unanswered = 0;
-	var empty = false;
 
-	if (question1 == "Leonardo Da Vinci") {
+	if (question1 == "correct") {
 		correct++;
 	}
-	if (question1 == "Pablo Ruiz Picasso" || "Leonardo DiCaprio" || "Andrea Salai"){	
+	else if (question1 == "incorrect"){	
 	incorrect++;
 	} else {
-		empty = "" ? true : empty;
 		unanswered++;
 	}
 
-	if (question2 == "Michelangelo") {
+	if (question2 == "correct") {
 		correct++;
-	}else {
-
+	}
+	else if (question2 == "incorrect"){	
 	incorrect++;
+	} else {
+		unanswered++;
 	}
 
-	if (question3 == "Post-Impressionist") {
+	if (question3 == "correct") {
 		correct++;
-	}else {
+	}
+	else if (question3 == "incorrect"){	
 	incorrect++;
+	} else {
+		unanswered++;
 	}
 
-	if (question3 == "Andy Warhol") {
+	if (question4 == "correct") {
 		correct++;
-	}else {
-	incorrect++;
 	}
+	else if (question4 == "incorrect"){	
+	incorrect++;
+	} else {
+		unanswered++;
+	}
+
+
+
+
+
+
+
+	// var score;
+
 	
-
-	// var pictures = ["img/win.gif", "img/meh.jpeg", "img/lose.gif"];
-	// var messages = ["Great job!", "That's just okay", "You really need to do better"];
-	var score;
-
-	// if (correct == 0) {
-	// 	score = 2;
-	// }
-
-	// if (correct > 0 && correct < 3) {
-	// 	score = 1;
-	// }
-
-	// if (correct == 3) {
-	// 	score = 0;
-	// }
-
 	document.getElementById("after_submit").style.visibility = "visible";
 	$("#number_correct").text("You scored this many correct: " + correct );
 	$("#wrong").text("You got this many wrong: " + incorrect );
 	$("#incomplete").text("You did not answer this many questions: " + unanswered);
-	// document.getElementById("message").innerHTML = messages[score];
-	// document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
-	// document.getElementById("picture").src = pictures[score];
-	}
+	};
 	
