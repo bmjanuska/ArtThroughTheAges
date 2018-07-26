@@ -17,87 +17,86 @@
 
 
 //======== Variables =========
-	
+
 	//======== Scores =========
-	win = 0,
-	loss = 0; 
-	unanswer = 0;
+	// win = 0,
+	// loss = 0; 
+	// unanswer = 0;
 	
 	//======== Timers =========
 
 	//======== Questions =========
 
-	var artQuestions = [
-	{
-		question: "This vegetarian and animal rights activist painted the Mona lisa.",
-		answers: {
-			a: "Pablo Ruiz Picasso",  
-			b: "Leonardo DiCaprio",
-			c: "Leonardo Da Vinci",
-			d: "Andrea Salai"
-		},
-		correctAns: "c"
-	},
 
-	{
-		question: "“I saw the angel in the marble and carved until I set him free.”  Was a quote from which sculptor? ",
-		answers: {
-			a: "Michelangelo",  
-			b: "Gian Lorenzo Bernini",
-			c: "Antonio Canova",
-			d: "Phidias"
-		},
-		correctAns: "a"
-	},
-
-	{
-		question: "Van Gogh was a(n)  _____ painter.",
-		answers: {
-			a: "Abstract Expressionist",  
-			b: "Early Baroque",
-			c: "Mural",
-			d: "Post-Impressionist"
-		},
-		correctAns: "d"
-	},
-
-	{
-		question: "This fashionable icon is known for Pop Art depiction of a Campbell’s Soup can actually comes in a set of 32 silkscreened canvases, each representing the 32 separate soup varieties that the company sold at the time.",
-		answers: {
-			a: "Willem De Cooning",  
-			b: "Robert Rauschenberg",
-			c: "Marcel Duchamp",
-			d: " Andy Warhol"
-		},
-		correctAns: "d"
-	},
-
-	{
-		question: " ----",
-		answers: {
-			a: "Willem De Cooning",  
-			b: "Robert Rauschenberg",
-			c: "Marcel Duchamp",
-			d: " Andy Warhol"
-		},
-		correctAns: "d"
-	},
-
-	{
-		question: " ----",
-		answers: {
-			a: "Willem De Cooning",  
-			b: "Robert Rauschenberg",
-			c: "Marcel Duchamp",
-			d: " Andy Warhol"
-		},
-		correctAns: "d"
-	},
-
-	
-	]
 
 //======== Functions =========
 
 
 //======== Variables =========
+
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var question4 = document.quiz.question4.value;
+	var correct = 0;
+	var incorrect = 0;
+	var unanswered = 0;
+	var empty = false;
+
+	if (question1 == "Leonardo Da Vinci") {
+		correct++;
+	}
+	if (question1 == "Pablo Ruiz Picasso" || "Leonardo DiCaprio" || "Andrea Salai"){	
+	incorrect++;
+	} else {
+		empty = "" ? true : empty;
+		unanswered++;
+	}
+
+	if (question2 == "Michelangelo") {
+		correct++;
+	}else {
+
+	incorrect++;
+	}
+
+	if (question3 == "Post-Impressionist") {
+		correct++;
+	}else {
+	incorrect++;
+	}
+
+	if (question3 == "Andy Warhol") {
+		correct++;
+	}else {
+	incorrect++;
+	}
+	
+
+	// var pictures = ["img/win.gif", "img/meh.jpeg", "img/lose.gif"];
+	// var messages = ["Great job!", "That's just okay", "You really need to do better"];
+	var score;
+
+	// if (correct == 0) {
+	// 	score = 2;
+	// }
+
+	// if (correct > 0 && correct < 3) {
+	// 	score = 1;
+	// }
+
+	// if (correct == 3) {
+	// 	score = 0;
+	// }
+
+	document.getElementById("after_submit").style.visibility = "visible";
+	$("#number_correct").text("You scored this many correct: " + correct );
+	$("#wrong").text("You got this many wrong: " + incorrect );
+	$("#incomplete").text("You did not answer this many questions: " + unanswered);
+	// document.getElementById("message").innerHTML = messages[score];
+	// document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+	// document.getElementById("picture").src = pictures[score];
+	}
+	

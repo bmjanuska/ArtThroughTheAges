@@ -40,14 +40,54 @@
 				
 			</div>
 		</div>
-		
+	
  -->
+ 		<form id ="quiz" name ="quiz">
 
- 		<div id="quiz"></div>
- 		<button id="submit">Submit Quiz </button>
- 		<div id="results"></div>
- 		
+ 			<p class = "questions">This vegetarian and animal rights activist painted the Mona lisa.</p>
+			<input type = "radio" id = "mc" name = "question1" value = "Pablo Ruiz Picasso">Pablo Ruiz Picasso<br>
+			<input type = "radio" id = "mc" name = "question1" value = "Leonardo DiCaprio">Leonardo DiCaprio<br>
+			<input type = "radio" id = "mc" name = "question1" value = "Leonardo Da Vinci">Leonardo Da Vinci<br>
+			<input type = "radio" id = "mc" name = "question1" value = "Andrea Salai">Andrea Salai<br>
+			<br>
+			<br>
+ 			<p class = "questions">“I saw the angel in the marble and carved until I set him free.” Was a quote from which sculptor? "</p>
+			<input type = "radio" id = "mc" name = "question2" value = "Michelangelo"> Michelangelo<br>
+			<input type = "radio" id = "mc" name = "question2" value = "Gian Lorenzo Bernini">Gian Lorenzo Bernini<br>
+			<input type = "radio" id = "mc" name = "question2" value = "Antonio Canova">Antonio Canova<br>
+			<input type = "radio" id = "mc" name = "question2" value = "Phidias">Phidias<br>
+			<br>
+			<br>
+ 			<p class = "questions">Van Gogh was a(n)  _____ painter.</p>
+			<input type = "radio" id = "mc" name = "question3" value = "Abstract Expressionist">Abstract Expressionist<br>
+			<input type = "radio" id = "mc" name = "question3" value = "Early Baroque">Early Baroque<br>
+			<input type = "radio" id = "mc" name = "question3" value = "Mural">Mural<br>
+			<input type = "radio" id = "mc" name = "question3" value = "Post-Impressionist">Post-Impressionist<br>
+			<br>
+			<br>
+ 			<p class = "questions">This fashionable icon is known for Pop Art depiction of a Campbell’s Soup can actually comes in a set of 32 silkscreened canvases, each representing the 32 separate soup varieties that the company sold at the time.</p>
+			<input type = "radio" id = "mc" name = "question4" value = "Willem De Cooning">Willem De Cooning<br>
+			<input type = "radio" id = "mc" name = "question4" value = "Robert Rauschenberg">Robert Rauschenberg<br>
+			<input type = "radio" id = "mc" name = "question4" value = "Marcel Duchamp">Marcel Duchamp<br>
+			<input type = "radio" id = "mc" name = "question4" value = "Andy Warhol">Andy Warhol<br>
+			<br>
+			<br>
+<!--  			<p class = "questions">_</p>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br> -->
 
+		<input id = "button" type = "button" value = "I'm finished!" onclick = "check();">
+		
+		</form>
+
+		<div id = "after_submit">
+			<p id = "number_correct"></p>
+			<p id = "wrong"></p> 
+			<p id = "incomplete"></p> 			
+			<img id = "picture">
+		</div>
 
 		<!-- Footer BAR -->
 		<footer class="footer">
@@ -55,5 +95,7 @@
 				<p> Footer</p>
 			</div>
 		</footer>
+		<script src = "assets/javascript/app.js"></script>
 
 	</body>
+	</html>
