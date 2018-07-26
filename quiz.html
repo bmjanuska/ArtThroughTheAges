@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<div<html lang="en">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title>Art Through the Ages</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+	crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+	crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+	<div class="container">
+
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+				<h1 class="display-4">Art Through the Ages</h1>
+				<p class="lead">Trivia on artists and works from old times past and now!</p>
+				<button id="start" class="button">Start Game</button>
+				<div id="time-left"></div>
+			</div>
+		</div>
+
+		
+ 		<form id ="quiz" name ="quiz">
+
+ 			<p class = "questions">This vegetarian and animal rights activist painted the Mona lisa.</p>
+			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Pablo Ruiz Picasso<br>
+			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Leonardo DiCaprio<br>
+			<input type = "radio" id = "mc" name = "question1" value = "correct">  Leonardo Da Vinci<br>
+			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Andrea Salai<br>
+			<br>
+			<br>
+ 			<p class = "questions">“I saw the angel in the marble and carved until I set him free.” Was a quote from which sculptor? "</p>
+			<input type = "radio" id = "mc" name = "question2" value = "correct">  Michelangelo<br>
+			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Gian Lorenzo Bernini<br>
+			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Antonio Canova<br>
+			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Phidias<br>
+			<br>
+			<br>
+ 			<p class = "questions">Van Gogh was a(n)  _____ painter.</p>
+			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Abstract Expressionist<br>
+			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Early Baroque<br>
+			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Mural<br>
+			<input type = "radio" id = "mc" name = "question3" value = "correct">  Post-Impressionist<br>
+			<br>
+			<br>
+ 			<p class = "questions">This fashionable icon is known for Pop Art depiction of a Campbell’s Soup can actually comes in a set of 32 silkscreened canvases, each representing the 32 separate soup varieties that the company sold at the time.</p>
+			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Willem De Cooning<br>
+			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Robert Rauschenberg<br>
+			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Marcel Duchamp<br>
+			<input type = "radio" id = "mc" name = "question4" value = "correct">  Andy Warhol<br>
+			<br>
+			<br>
+<!--  			<p class = "questions">_</p>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
+			<input type = "radio" id = "mc" name = "question3" value = "-"> <br> -->
+
+		<input id = "button" type = "button" value = "I'm done!" onclick = "check();">
+		
+		</form>
+
+		<div id = "after_submit">
+			<p id = "number_correct"></p>
+			<p id = "wrong"></p> 
+			<p id = "incomplete"></p> 			
+		</div>
+
+
+
+		<script src = "assets/javascript/app.js"></script>
+
+	</body>
+	</html>

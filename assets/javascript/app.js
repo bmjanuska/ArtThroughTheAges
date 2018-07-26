@@ -2,10 +2,7 @@
 // Have a start screen and a button to initialize the timer and set of questions
 
 // Timer starts and calls the following 
-// Make an array for questions
-// Variable for wins 
-// Variable for loss
-// Variable for incomplete
+
 // Variable for timer
 
 // Call length of questions 
@@ -16,22 +13,44 @@
 
 
 
-//======== Variables =========
+//======== Global Variables =========
 
-	//======== Scores =========
-	// unanswer = 0;
-	
+
 	//======== Timers =========
+	var time;
+	var counter = 5;
 
-	//======== Questions =========
+
+	function reduceTime(){
+		counter--; 
+		$("#time-left").text(counter + " seconds remaining");
+		if (counter === 0){
+			check();
+
+		}
+
+
+	}
+
+	// reduceTime();
+
+//======== Game Start =======
+function gameStart() {
+
+	time = setInterval(reduceTime, 1000);
+	$("#start").remove();
+
+}
 
 
 
 //======== Functions =========
 
-
-
+//This func will run to check the answers pickedo on screen
 function check(){
+
+	clearInterval(time);
+
 	//======== Variables =========
 	var question1 = document.quiz.question1.value;
 	var question2 = document.quiz.question2.value;
@@ -44,6 +63,7 @@ function check(){
 	// unanswered score variable
 	var unanswered = 0;
 
+	// q.1
 	if (question1 == "correct") {
 		correct++;
 	}
@@ -53,6 +73,7 @@ function check(){
 		unanswered++;
 	}
 
+	// q.2
 	if (question2 == "correct") {
 		correct++;
 	}
@@ -62,6 +83,7 @@ function check(){
 		unanswered++;
 	}
 
+	// q.3
 	if (question3 == "correct") {
 		correct++;
 	}
@@ -71,6 +93,7 @@ function check(){
 		unanswered++;
 	}
 
+	// q.4
 	if (question4 == "correct") {
 		correct++;
 	}
@@ -80,18 +103,15 @@ function check(){
 		unanswered++;
 	}
 
-
-
-
-
-
-
-	// var score;
-
 	
 	document.getElementById("after_submit").style.visibility = "visible";
 	$("#number_correct").text("You scored this many correct: " + correct );
 	$("#wrong").text("You got this many wrong: " + incorrect );
 	$("#incomplete").text("You did not answer this many questions: " + unanswered);
-	};
-	
+};
+
+$(document).on("click", "#start", function() {
+	gameStart();
+	document.getElementById("quiz").style.visibility = "visible";
+
+});	
