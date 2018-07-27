@@ -3,6 +3,7 @@ opacity: 50%;
 background-image: url("../images/a_sunday_on_la_grande_jatte_georges_seurat_v2_0.jpg");
 background-size: cover;
 margin-bottom:10px;
+border-radius: 5px;
 }
 
 .row {
@@ -18,4 +19,26 @@ margin: 15px 0;
 body{
 	background-image: url("../images/lightpaperfibers.png");
 	background-repeat: repeat;
+}
+
+#time-left{
+	font-size:25px;
+	font-weight:bold;
+}
+
+
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #D79F06;
+    border: 4px #B38402;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+    border-style: double;
+}
+
+h1{
+	font-family: 'Libre Baskerville', serif;
+	letter-spacing: 1.5px;
 }
