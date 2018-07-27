@@ -14,41 +14,37 @@
 
 
 //======== Global Variables =========
+	//on start quiz is hidden
+	$("#quiz").hide();
 
 
 	//======== Timers =========
 	var time;
-	var counter = 5;
+	var counter = 60;
 
 
 	function reduceTime(){
 		counter--; 
 		$("#time-left").text(counter + " seconds remaining");
 		if (counter === 0){
-			check();
-
+		$("#quiz").hide();
+		check();
 		}
-
-
 	}
 
-	// reduceTime();
+
+
 
 //======== Game Start =======
 function gameStart() {
 
 	time = setInterval(reduceTime, 1000);
 	$("#start").remove();
-
+	$("#quiz").show();
 }
 
-function newPageStart() {
-	window.open("quiz.html")
-}
-
-function load(){
-	reduceTime();
-	gameStart();
+function gameEnd(){
+	$("#quiz").hide();
 }
 
 
@@ -64,6 +60,8 @@ function check(){
 	var question2 = document.quiz.question2.value;
 	var question3 = document.quiz.question3.value;
 	var question4 = document.quiz.question4.value;
+	var question5 = document.quiz.question5.value;
+	var question6 = document.quiz.question6.value;
 	// correct score variable
 	var correct = 0;
 	// incorrect score variable
@@ -111,15 +109,38 @@ function check(){
 		unanswered++;
 	}
 
+	// q.5
+	if (question5 == "correct") {
+		correct++;
+	}
+	else if (question5 == "incorrect"){	
+	incorrect++;
+	} else {
+		unanswered++;
+	}
+
+	// q.6
+	if (question6 == "correct") {
+		correct++;
+	}
+	else if (question6 == "incorrect"){	
+	incorrect++;
+	} else {
+		unanswered++;
+	}
+
 	
 	document.getElementById("after_submit").style.visibility = "visible";
 	$("#number_correct").text("You scored this many correct: " + correct );
 	$("#wrong").text("You got this many wrong: " + incorrect );
 	$("#incomplete").text("You did not answer this many questions: " + unanswered);
+
+	$("#quiz").hide();
+
 };
 
 $(document).on("click", "#start", function() {
-	gameStart();
-		document.getElementById("quiz").style.visibility = "visible";
+gameStart();
+document.getElementById("quiz").style.visibility = "visible";
 
 });	

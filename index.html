@@ -23,7 +23,8 @@
 
 <body>
 	<div class="container">
-
+		
+		<!--title and start-->
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container text-center">
 				<h1 class="display-4">Art Through the Ages</h1>
@@ -33,54 +34,105 @@
 			</div>
 		</div>
 
-		
- 		<form id ="quiz" name ="quiz">
+		<!--score-->
+		<div class= "row">
+			<div class ="col-12">
+				<div id = "after_submit">
+					<p id = "number_correct"></p>
+					<p id = "wrong"></p> 
+					<p id = "incomplete"></p> 			
+				</div>
+			</div>
+		</div>		
 
- 			<p class = "questions">This vegetarian and animal rights activist painted the Mona lisa.</p>
-			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Pablo Ruiz Picasso<br>
-			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Leonardo DiCaprio<br>
-			<input type = "radio" id = "mc" name = "question1" value = "correct">  Leonardo Da Vinci<br>
-			<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Andrea Salai<br>
-			<br>
-			<br>
- 			<p class = "questions">“I saw the angel in the marble and carved until I set him free.” Was a quote from which sculptor? "</p>
-			<input type = "radio" id = "mc" name = "question2" value = "correct">  Michelangelo<br>
-			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Gian Lorenzo Bernini<br>
-			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Antonio Canova<br>
-			<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Phidias<br>
-			<br>
-			<br>
- 			<p class = "questions">Van Gogh was a(n)  _____ painter.</p>
-			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Abstract Expressionist<br>
-			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Early Baroque<br>
-			<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Mural<br>
-			<input type = "radio" id = "mc" name = "question3" value = "correct">  Post-Impressionist<br>
-			<br>
-			<br>
- 			<p class = "questions">This fashionable icon is known for Pop Art depiction of a Campbell’s Soup can actually comes in a set of 32 silkscreened canvases, each representing the 32 separate soup varieties that the company sold at the time.</p>
-			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Willem De Cooning<br>
-			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Robert Rauschenberg<br>
-			<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Marcel Duchamp<br>
-			<input type = "radio" id = "mc" name = "question4" value = "correct">  Andy Warhol<br>
-			<br>
-			<br>
-<!--  			<p class = "questions">_</p>
-			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
-			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
-			<input type = "radio" id = "mc" name = "question3" value = "-"> <br>
-			<input type = "radio" id = "mc" name = "question3" value = "-"> <br> -->
+		<!--quiz-->
+		<form id ="quiz" name ="quiz">
+			<div class="row">
+				<div class ="col-6">
+					<p class = "questions">This vegetarian and animal rights activist painted the Mona lisa.</p>
+					<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Pablo Ruiz Picasso<br>
+					<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Leonardo DiCaprio<br>
+					<input type = "radio" id = "mc" name = "question1" value = "correct">  Leonardo Da Vinci<br>
+					<input type = "radio" id = "mc" name = "question1" value = "incorrect">  Andrea Salai<br>
+				</div>
+				<div class ="col-6">
+					<img class="img-fluid img-thumbnail" src="assets/images/monac.jpg">
+				</div>
+			</div>
 
-		<input id = "button" type = "button" value = "I'm done!" onclick = "check();">
-		
+			<hr>
+
+			<div class="row">
+				<div class ="col-12">
+					<p class = "questions">“I saw the angel in the marble and carved until I set him free.” Was a quote from which sculptor? "</p>
+					<input type = "radio" id = "mc" name = "question2" value = "correct">  Michelangelo<br>
+					<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Gian Lorenzo Bernini<br>
+					<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Antonio Canova<br>
+					<input type = "radio" id = "mc" name = "question2" value = "incorrect">  Phidias<br>
+				</div>
+			</div>
+
+			<hr>
+			
+			<div class="row">
+				<div class ="col-12">
+					<p class = "questions">Van Gogh was a(n)  _____ painter.</p>
+					<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Abstract Expressionist<br>
+					<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Early Baroque<br>
+					<input type = "radio" id = "mc" name = "question3" value = "incorrect">  Mural<br>
+					<input type = "radio" id = "mc" name = "question3" value = "correct">  Post-Impressionist<br>
+				</div>
+			</div>
+
+			<hr>
+			
+			<div class="row">
+				<div class ="col-12">
+					<p class = "questions">This fashionable icon is known for Pop Art depiction of a Campbell’s Soup can actually comes in a set of 32 silkscreened canvases, each representing the 32 separate soup varieties that the company sold at the time.</p>
+					<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Willem De Cooning<br>
+					<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Robert Rauschenberg<br>
+					<input type = "radio" id = "mc" name = "question4" value = "incorrect">  Marcel Duchamp<br>
+					<input type = "radio" id = "mc" name = "question4" value = "correct">  Andy Warhol<br>
+				</div>
+			</div>
+
+			<hr>
+			
+			<div class="row">
+				<div class ="col-12">
+					<p class = "questions">What are the 4 periods of ancient Greek art?</p>
+					<input type = "radio" id = "mc" name = "question5" value = "correct">  Geometric, Archaic, Classical, and Hellenistic<br>
+					<input type = "radio" id = "mc" name = "question5" value = "incorrect">  Baroque, Neoclassical, Romanticism, Realism<br>
+					<input type = "radio" id = "mc" name = "question5" value = "incorrect">  Impressionism, Post-Impressionism, Fauvism, Cubism<br>
+					<input type = "radio" id = "mc" name = "question5" value = "incorrect">  None of the above, they were all about Dada and Surrealism<br>
+				</div>
+			</div>
+
+			<hr>
+			
+			<div class="row">
+				<div class="col-6"><img class="img-fluid img-thumbnail" src="https://kinfolk.com/wp-content/uploads/2017/05/Kinfolk_Web2017_TheWave_01-1024x683.jpg">
+				</div>
+				<div class ="col-6">
+					<p class = "questions">What is the name of the woodblock print shown?</p>
+					<input type = "radio" id = "mc" name = "question6" value = "incorrect">  Kawabunga<br>
+					<input type = "radio" id = "mc" name = "question6" value = "correct">  The Wave<br>
+					<input type = "radio" id = "mc" name = "question6" value = "incorrect">  Stormy Seas<br>
+					<input type = "radio" id = "mc" name = "question6" value = "incorrect">  Ocean Mist<br>
+				</div>
+
+			</div>
+			<br>
+			<br>
+			<div class="row">
+				<div class ="col-12 text-center">
+					<input id = "button" type = "button" value = "I'm done!" onclick = "check();">
+				</div> 
+			</div>
+			<br>
+			<br>
+			
 		</form>
-
-		<div id = "after_submit">
-			<p id = "number_correct"></p>
-			<p id = "wrong"></p> 
-			<p id = "incomplete"></p> 			
-		</div>
-
-
 
 		<script src = "assets/javascript/app.js"></script>
 
